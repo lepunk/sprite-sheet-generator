@@ -44,7 +44,8 @@ def main():
     x = 0
     y = 0
 
-    for file in glob.glob("*.png"):
+    for file in sorted(glob.glob('*.png')):
+        print(file)
         img = Image.open(file)
 
         x_pos = x * max_width + (math.floor(float(max_width - img.size[0]) / 2.0))
